@@ -23,7 +23,6 @@ class Preprocessor(object):
     
     def align_rows(self,file_to_be_preprocessed):
         converted_document_to_list = Preprocessor().read_input_file_and_convert_to_list(file_to_be_preprocessed)
-#     pprint(converted_document_to_list)
         print len(converted_document_to_list)
         size_of_list = len(converted_document_to_list)
         for i in range(size_of_list-1):
@@ -53,10 +52,7 @@ if __name__ == '__main__':
     document_data_frame = document_data_frame.filter(regex = '^[^\?]')
     document_data_frame.replace(to_replace='\t*\s*#.*',value='',regex=True,inplace=True)
     print document_data_frame
-#     pprint(white_space_removal)    
-#     print type(white_space_removal[0][3])
     print "{} seconds".format(time.time() - start_time)
-    
     
     '''PENDING
     type casting
